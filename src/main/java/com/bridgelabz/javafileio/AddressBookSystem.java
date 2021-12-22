@@ -4,11 +4,35 @@ import java.util.List;
 import java.util.Scanner;
 public class AddressBookSystem {
 public static void main(String[] args) {
-	System.out.println("Welcome to Address Book Program");
-	createContact();
-	addContact();
-	editContact();
-	deleteContact();
+	 System.out.println("Welcome to Address Book Program");
+	 choice();
+}
+	 public static void choice() {
+     Scanner scanner=new Scanner(System.in);
+     System.out.println("For create contact press 1");
+     System.out.println("For add contact press 2");
+     System.out.println("For edit contact press 3");
+     System.out.println("For delete contact press 4");
+     System.out.println("Enter your choice");
+	 int UsrIn;
+     UsrIn = scanner.nextInt();
+     switch (UsrIn) {
+     case 1:
+    	   createContact();
+     break;
+     case 2: 
+    	   addContact();  
+    	   System.out.println("Would you like to add someone else? 1: Yes, 2: No"); 
+    	   UsrIn = scanner.nextInt();
+    	   System.out.println("Would you like to add someone else? 1: Yes, 2: No"); 
+     break;
+     case 3:
+    	   editContact();
+     break;
+     case 4:		
+    	   deleteContact();
+     break;
+     }
 }
 public static List<Contact> createContact(){
 	List<Contact> contacts = new ArrayList<Contact>();
@@ -34,7 +58,6 @@ public static List<Contact> createContact(){
     return contacts;
 }
 public static List<Contact> addContact(){
-	System.out.println("Would you like to add more contact");
 	List<Contact> contacts = new ArrayList<Contact>();
 	Scanner scanner=new Scanner(System.in);
     System.out.println("Enter First Name: ");

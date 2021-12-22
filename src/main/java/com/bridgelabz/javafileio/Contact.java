@@ -8,13 +8,9 @@ public class Contact {
 	    private String zip;
 	    private String phoneNumber;
 	    private String email;
-	    private final int ID;
-	    private static int id = 1000;
-
 	    public Contact(String firstName, String lastName, String address, String city, String state, String zip,
 				String phoneNumber, String email) {
 			super();
-			this.ID = ++id;
 			this.firstName = firstName;
 			this.lastName = lastName;
 			this.address = address;
@@ -75,7 +71,6 @@ public class Contact {
 		@Override
 		public String toString() {
 			return "Contact [firstName=" + firstName + ", lastName=" + lastName + ", address=" + address + ", city=" + city
-					+ ", state=" + state + ", zip=" + zip + ", phoneNumber=" + phoneNumber + ", email=" + email + ", ID="
-					+ ID + "]";
+					+ ", state=" + state + ", zip=" + zip + ", phoneNumber=" + phoneNumber + ", email=" + email + "]";
 		}
 }
