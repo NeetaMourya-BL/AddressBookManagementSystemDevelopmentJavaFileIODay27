@@ -8,6 +8,7 @@ public static void main(String[] args) {
 	createContact();
 	addContact();
 	editContact();
+	deleteContact();
 }
 public static List<Contact> createContact(){
 	List<Contact> contacts = new ArrayList<Contact>();
@@ -78,5 +79,14 @@ public static List<Contact> editContact() {
     editcontacts.add(new Contact(firstName, lastName, address, city,state,zip,phoneNumber,email));
     System.out.println(editcontacts);
     return editcontacts;
+}
+public static List<Contact> deleteContact(){
+	List<Contact> deletecontacts = new ArrayList<Contact>();
+	Scanner scanner=new Scanner(System.in);
+	System.out.println("Enter First Name of person you want to delete: ");
+    String firstName = scanner.next();
+    deletecontacts.removeAll(deletecontacts);
+    System.out.println(deletecontacts);
+    return deletecontacts;
 }
 }
