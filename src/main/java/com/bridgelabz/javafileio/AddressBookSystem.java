@@ -28,7 +28,7 @@ public static void main(String[] args) {
            UsrIn = scanner.nextInt();
      }
      break;
-         case 2:
+     case 2:
     	   editContact();
      break;
      case 3:		
