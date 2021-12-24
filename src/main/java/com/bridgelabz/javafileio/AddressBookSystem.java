@@ -153,12 +153,68 @@ public static List<Contact> editContact() {
 public static List<Contact> deleteContact(){
 	List<Contact> deletecontacts = new ArrayList<Contact>();
 	Scanner scanner=new Scanner(System.in);
+	System.out.println("For delete first name press 1");
+    System.out.println("For delete last name press 2");
+    System.out.println("For delete address press 3");
+    System.out.println("For delete city press 4");
+    System.out.println("For delete state press 5");
+    System.out.println("For delete zip press 6");
+    System.out.println("For delete phone number press 7");
+    System.out.println("For delete email press 8");
+    System.out.println("For complete contact details delete press 9");
+    System.out.println("Exit 0");
+    int choice;
+    choice = scanner.nextInt();
+    while (choice != 0) {
+    switch(choice) {
+    case 1:
 	System.out.println("Enter First Name of person you want to delete: ");
     String firstName = scanner.next();
-    deletecontacts.removeAll(deletecontacts);
     deletecontacts.remove(firstName);
- //   deletecontacts.
+    break;
+    case 2:
+    System.out.println("Enter Last Name of person you want to delete: ");
+    String lastName = scanner.next();
+    deletecontacts.remove(lastName);
+    break;
+    case 3:
+        System.out.println("Enter addrees of person you want to delete: ");
+        String address = scanner.next();
+        deletecontacts.remove(address);
+        break; 
+    case 4:
+        System.out.println("Enter city of person you want to delete: ");
+        String city = scanner.next();
+        deletecontacts.remove(city);
+        break; 
+    case 5:
+        System.out.println("Enter state of person you want to delete: ");
+        String state = scanner.next();
+        deletecontacts.remove(state);
+        break; 
+    case 6:
+        System.out.println("Enter zip of person you want to delete: ");
+        String zip = scanner.next();
+        deletecontacts.remove(zip);
+        break; 
+    case 7:
+        System.out.println("Enter Last Name of person you want to delete: ");
+        String phoneNumber = scanner.next();
+        deletecontacts.remove(phoneNumber);
+        break;
+    case 8:
+        System.out.println("Enter Last Name of person you want to delete: ");
+        String email = scanner.next();
+        deletecontacts.remove(email);
+        break;
+    case 9:
+       deletecontacts.removeAll(deletecontacts);
+    default: 
+    	System.out.println("no valid option");
+    break;
+    }
     System.out.println(deletecontacts);
-    return deletecontacts;
+}
+	return deletecontacts;
 }
 }
